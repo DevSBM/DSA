@@ -80,7 +80,28 @@
     <ClInclude Include="DataStructure\DisjointSet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataStructure\Graph\Graph.h">
+    <ClInclude Include="Algorithm\graph\CycleUndirectedDFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\graph\CycleDirectedDFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\graph\TopoSortBFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\graph\ConnectedComponentUndirectedDFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\graph\StrongConnCompKosarajuDFS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\graph\Dijkstra.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\graph\DisjointSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\graph\Kruskal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,32 +1,56 @@
 #pragma once
-#include<vector>
+#include <vector>
 
-class DisjointSet {
-public:
-	std::vector<int> parent, rank;
-private:
-	DisjointSet(int n) {
-		parent.resize(n);
-		rank.resize(n,0);
-		for (size_t i = 0; i < n; i++)
-		{
-			parent[i] = i;
-		}
-	}
-	int find(int x) {
-		if (parent[x] != x) {
-			parent[x] = find(parent[x]);
-		}
-		return parent[x];
-	}
+namespace DisjointSet {
+	using namespace std;
+	class DSU {
+	public:
+		vector<int> parent, rank;
 
-	void unionSets(int x,int y) {
-		int rootX = find(x);
-		int rootY = find(y);
+		DSU(int n) {
+			parent.resize(n);
+			rank.resize(n, 0);
 
-		if (rootX != rootY) {
-
+			for (int i = 0; i < n; i++) {
+				parent[i] = i;
+			}
 		}
 
-	}
-};
+		int find(int u) {
+			if (parent[u] != u) {
+				parent[u] = find(parent[u]);
+			}
+
+			return parent[u];
+		}
+
+		bool unionSet(int u, int v) {
+			int parentU = find(u);
+			int parentV = find(v);
+
+			if (parentU != parentV) {
+				if (rank[parentU] < rank[parentV]) {
+					parent[parentU] = parentV;
+				}
+				else if (rank[parentU] > rank[parentV]) {
+					parent[parentV] = parentU;
+				}
+				else {
+					parent[parentV] = parentU;
+					rank[parentU]++;
+				}
+			}
+			else {
+				return false;
+			}
+
+			return true;
+		}
+
+		bool isConnected(int u, int v) {
+			return find(u) == find(v);
+		}
+
+	};
+
+}

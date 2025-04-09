@@ -132,8 +132,15 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithm\graph\ConnectedComponentUndirectedDFS.h" />
+    <ClInclude Include="Algorithm\graph\CycleDirectedDFS.h" />
+    <ClInclude Include="Algorithm\graph\CycleUndirectedDFS.h" />
+    <ClInclude Include="Algorithm\graph\Dijkstra.h" />
+    <ClInclude Include="Algorithm\graph\DisjointSet.h" />
+    <ClInclude Include="Algorithm\graph\Kruskal.h" />
+    <ClInclude Include="Algorithm\graph\StrongConnCompKosarajuDFS.h" />
+    <ClInclude Include="Algorithm\graph\TopoSortBFS.h" />
     <ClInclude Include="DataStructure\DisjointSet.h" />
-    <ClInclude Include="DataStructure\Graph\Graph.h" />
     <ClInclude Include="DataStructure\lfu.h" />
     <ClInclude Include="DataStructure\LinkedList\CircularLinkedList.h" />
     <ClInclude Include="DataStructure\LinkedList\DoublyLinkedList.h" />
