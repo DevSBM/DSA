@@ -21,6 +21,7 @@ namespace Dijkstra {
 		
 		// weight,node
 		priority_queue<pair<int, int>, vector<pair<int, int>,greater<>>> pq;
+		pq.push({0,src});
 
 		while (!pq.empty()) {
 			auto [nodeDist, node] = pq.top();
